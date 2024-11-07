@@ -8,8 +8,8 @@ import ThemeBtn from "./ThemeBtn";
 export default function Navbar() {
     let pathname = usePathname() || '/'
     return (
-        <Disclosure as="nav">
-            {({ open }) => (
+        <Disclosure as="nav" className="sticky top-0 z-50 bg-white dark:bg-[#090908]">
+            {({ open, close }) => (
                 <>
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex justify-between h-16">
@@ -17,32 +17,32 @@ export default function Navbar() {
                                 <div className="flex items-center">
                                     <Link href="/">
                                         <h1 className="text-2xl font-medium">
-                                            <span className="text-indigo-500">Nakarin</span> Srijumrat
+                                            <span className="text-indigo-500">Nakarin</span>
                                         </h1>
                                     </Link>
                                 </div>
 
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8 sm:items-center">
                                     <Link href="/" prefetch className={`${pathname === "/" ? "border-indigo-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                                        : 'border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                        : 'hover:text-black border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
                                         }`}>
                                         Home
                                     </Link>
 
                                     <Link href="/projects" prefetch className={`${pathname === "/projects" ? "border-indigo-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                                        : 'border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                        : 'hover:text-black border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
                                         }`}>
                                         Projects
                                     </Link>
 
                                     <Link href="/skills" prefetch className={`${pathname === "/skills" ? "border-indigo-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                                        : 'border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                        : 'hover:text-black border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
                                         }`}>
                                         Skills
                                     </Link>
 
                                     <Link href="/contact" prefetch className={`${pathname === "/contact" ? "border-indigo-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                                        : 'border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                                        : 'hover:text-black border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
                                         }`}>
                                         Contact
                                     </Link>
@@ -72,35 +72,39 @@ export default function Navbar() {
                     <DisclosurePanel className="sm:hidden">
                         <div className="pt-2 pb-3 space-y-1">
                             <Link href="/"
-                            prefetch
-                            className={`${pathname == "/" ? 'bg-indigo-50 border-indigo-500 text-indigo-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800'
-                                : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white'
-                                } `}>
-                                    Home
+                                prefetch
+                                onClick={() => close()}
+                                className={`${pathname == "/" ? 'bg-indigo-50 border-indigo-500 text-indigo-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800'
+                                    : 'hover:text-black border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 dark:hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white'
+                                    } `}>
+                                Home
                             </Link>
 
                             <Link href="/projects"
-                            prefetch
-                            className={`${pathname == "/projects" ? 'bg-indigo-50 border-indigo-500 text-indigo-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800'
-                                : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white'
-                                } `}>
-                                    Projects
+                                prefetch
+                                onClick={() => close()}
+                                className={`${pathname == "/projects" ? 'bg-indigo-50 border-indigo-500 text-indigo-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800'
+                                    : 'hover:text-black border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 dark:hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white'
+                                    } `}>
+                                Projects
                             </Link>
 
                             <Link href="/skills"
-                            prefetch
-                            className={`${pathname == "/skills" ? 'bg-indigo-50 border-indigo-500 text-indigo-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800'
-                                : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white'
-                                } `}>
-                                    Skills
+                                prefetch
+                                onClick={() => close()}
+                                className={`${pathname == "/skills" ? 'bg-indigo-50 border-indigo-500 text-indigo-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800'
+                                    : 'hover:text-black border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 dark:hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white'
+                                    } `}>
+                                Skills
                             </Link>
 
                             <Link href="/contact"
-                            prefetch
-                            className={`${pathname == "/contact" ? 'bg-indigo-50 border-indigo-500 text-indigo-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800'
-                                : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white'
-                                } `}>
-                                    Contact
+                                prefetch
+                                onClick={() => close()}
+                                className={`${pathname == "/contact" ? 'bg-indigo-50 border-indigo-500 text-indigo-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800'
+                                    : 'hover:text-black border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 dark:hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white'
+                                    } `}>
+                                Contact
                             </Link>
                         </div>
                     </DisclosurePanel>
