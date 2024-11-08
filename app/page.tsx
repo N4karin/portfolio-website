@@ -27,7 +27,7 @@ export default function Page() {
         <div className="pt-20 items-center font-bold text-4xl">
           Introduction
         </div>
-        <div className="items-center space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
+        <div className="items-center space-y-2 xl:grid xl:grid-cols-3 xl:space-y-0">
           <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
 
             <p>
