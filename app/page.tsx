@@ -2,6 +2,7 @@ import Image from "next/image";
 import Me from "@/public/image.jpeg"
 import { Button } from "@headlessui/react";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 import 'aos/dist/aos.css';
 
 export default function Page() {
@@ -24,17 +25,17 @@ export default function Page() {
   return (
     <div className="divide-y divide-gray-100 dark:divide-gray-700">
       <section id="home">
-        <div className="pt-20 items-center font-bold text-4xl">
+        <div className="pt-14 items-center font-bold text-4xl">
           Introduction
         </div>
         <div className="items-center space-y-2 xl:grid xl:grid-cols-3 xl:space-y-0">
           <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
 
             <p>
-              Hello everyone my name is Nakarin, I am 25 years old and I am a Software Engineer based in Basel/Switzerland.
+              Hello everyone my name is Nakarin! I am 25 years old and a Software Engineer based in Basel/Switzerland.
             </p>
             <p>
-              I enjoy designing and coding applications as it is one of the most creative fields in software engineering. Driven by curiosity and the desire to craft efficient and user-friendly solutions, I love to work with a variety of technologies to keep a broad horizon and ensure that the right tools are used for the right job.
+              I enjoy designing and coding applications as it is one of the most creative fields in technology. Driven by curiosity and the desire to craft efficient and user-friendly solutions, I love to work with a variety of technologies to keep a broad horizon and ensure that the right tools are used for the right job.
             </p>
 
             <a
@@ -106,17 +107,7 @@ export default function Page() {
           </div>
 
           <div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie augue vel nunc placerat tincidunt. Etiam sed eleifend erat, ornare placerat justo. Nam venenatis nisl feugiat nibh lobortis euismod. Maecenas auctor dolor eu erat dapibus aliquam. Duis ultricies urna nec mattis laoreet. Nunc id ullamcorper risus, ut ultrices orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus at libero auctor aliquam. Pellentesque posuere et eros sit amet viverra. Quisque lobortis leo et sollicitudin pulvinar.
-
-              Proin dignissim efficitur euismod. Pellentesque eget vestibulum ex. Aenean vestibulum accumsan lacus a ullamcorper. Nullam nisl arcu, condimentum hendrerit mollis eu, dictum id ligula. Vivamus efficitur, nunc vitae placerat faucibus, lorem odio varius nisl, quis dignissim ex lectus nec neque. Maecenas nulla lectus, posuere eget dictum at, gravida vel est. Donec congue viverra ante, quis congue enim viverra eget. Sed ut magna et nibh vehicula euismod. Pellentesque feugiat consectetur arcu, eu aliquam est mattis in. Nunc faucibus, dolor sit amet ultricies commodo, quam massa iaculis tellus, at sollicitudin est mauris et sem. Donec ullamcorper, mi vitae aliquet facilisis, tortor mauris laoreet lectus, eu tincidunt ipsum sem eget augue.
-
-              MaeceLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie augue vel nunc placerat tincidunt. Etiam sed eleifend erat, ornare placerat justo. Nam venenatis nisl feugiat nibh lobortis euismod. Maecenas auctor dolor eu erat dapibus aliquam. Duis ultricies urna nec mattis laoreet. Nunc id ullamcorper risus, ut ultrices orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus at libero auctor aliquam. Pellentesque posuere et eros sit amet viverra. Quisque lobortis leo et sollicitudin pulvinar.
-
-              Proin dignissim efficitur euismod. Pellentesque eget vestibulum ex. Aenean vestibulum accumsan lacus a ullamcorper. Nullam nisl arcu, condimentum hendrerit mollis eu, dictum id ligula. Vivamus efficitur, nunc vitae placerat faucibus, lorem odio varius nisl, quis dignissim ex lectus nec neque. Maecenas nulla lectus, posuere eget dictum at, gravida vel est. Donec congue viverra ante, quis congue enim viverra eget. Sed ut magna et nibh vehicula euismod. Pellentesque feugiat consectetur arcu, eu aliquam est mattis in. Nunc faucibus, dolor sit amet ultricies commodo, quam massa iaculis tellus, at sollicitudin est mauris et sem. Donec ullamcorper, mi vitae aliquet facilisis, tortor mauris laoreet lectus, eu tincidunt ipsum sem eget augue.
-
-              Maecenas ut magna sagittis ipsum rutrum faucibus vitae a mi. Pellentesque pellentesque eleifend nisl, at tempus libero rutrum vitae. Morbi luctus eros vitae turpis egestas, at luctus justo pretium. Aenean ultricies velit in ipsum faucibus, id hendrerit risus egestas. Mauris at velit sed nunc porta mattis. Vestibulum sed gravida magna, vitae bibendum nisi. Vestibulum ornare hendrerit convallis. Mauris sed efficitur tortor. Etiam consequat aliquam posuere. Aenean ac iaculis lorem. Pellentesque aliquet quam ac ipsum commodo ultrices. Pellentesque feugiat arcu ut nisl facilisis euismod. Aliquam at rhoncus purus.
-            </p>
+            <Skills />
           </div>
         </section>
       </div>

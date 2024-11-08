@@ -75,7 +75,7 @@ export default function Navbar() {
     };
 
     return (
-        <Disclosure as="nav" className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b-2 dark:border-gray-800">
+        <Disclosure as="nav" className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b-2 dark:border-gray-500">
             {({ open, close }) => (
                 <>
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

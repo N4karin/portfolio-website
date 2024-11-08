@@ -11,15 +11,15 @@ export default function Projects() {
     }, []);
 
     return (
-        <div>
-            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-16 pb-10">
+        <div className="pb-10">
+            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-16 pb-6">
                 {[
                     { src: "/projectimages/project1.jpg", name: "nakar.in", technologies: "Python, Django", alt: "MusicPage", description: "My personal website showcasing current and past projects, software/tools used and a comprehensive library of my discography." },
                     { src: "/projectimages/project2.png", name: "Kanji Driller", technologies: "Angular, MongoDB", alt: "KanjiDrill", description: "A Japanese kanji learning tool featuring flashcard-style drills. Users can filter and select specific letters they want to learn." },
                     { src: "/projectimages/project3.png", name: "Interval Trainer", technologies: "React, Express", alt: "IntervalTrainer", description: "An app to learn and memorize music intervals and chords. Offers recognition and recall quizzes using the keyboard as a virtual instrument." },
                 ].map((project, index) => (
                     <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
-                        <div className="relative group w-full h-64 md:h-48 transform cursor-pointer hover:-translate-y-6 transition-all duration-200">
+                        <div className="relative group w-full h-64 md:h-48 transform hover:-translate-y-6 transition-all duration-200">
                             <Image
                                 src={project.src}
                                 alt={project.alt}
