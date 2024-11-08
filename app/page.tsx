@@ -1,19 +1,21 @@
 import Image from "next/image";
 import Me from "@/public/image.jpeg"
 import { Button } from "@headlessui/react";
+import Projects from "./components/Projects";
+import 'aos/dist/aos.css';
 
 export default function Page() {
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
-      const yOffset = -70; // Adjust this value to fit the offset you need
-      const y = section.getBoundingClientRect().top + window + yOffset;
+      const yOffset = 300; // Adjust this value to fit the offset you need
+      const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
-  const handleNavClick = (event, id) => {
+  const handleNavClick = (event, id: string) => {
     event.preventDefault();
     scrollToSection(id);
   };
@@ -92,24 +94,13 @@ export default function Page() {
             Projects
           </div>
 
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie augue vel nunc placerat tincidunt. Etiam sed eleifend erat, ornare placerat justo. Nam venenatis nisl feugiat nibh lobortis euismod. Maecenas auctor dolor eu erat dapibus aliquam. Duis ultricies urna nec mattis laoreet. Nunc id ullamcorper risus, ut ultrices orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus at libero auctor aliquam. Pellentesque posuere et eros sit amet viverra. Quisque lobortis leo et sollicitudin pulvinar.
+          <Projects />
 
-              Proin dignissim efficitur euismod. Pellentesque eget vestibulum ex. Aenean vestibulum accumsan lacus a ullamcorper. Nullam nisl arcu, condimentum hendrerit mollis eu, dictum id ligula. Vivamus efficitur, nunc vitae placerat faucibus, lorem odio varius nisl, quis dignissim ex lectus nec neque. Maecenas nulla lectus, posuere eget dictum at, gravida vel est. Donec congue viverra ante, quis congue enim viverra eget. Sed ut magna et nibh vehicula euismod. Pellentesque feugiat consectetur arcu, eu aliquam est mattis in. Nunc faucibus, dolor sit amet ultricies commodo, quam massa iaculis tellus, at sollicitudin est mauris et sem. Donec ullamcorper, mi vitae aliquet facilisis, tortor mauris laoreet lectus, eu tincidunt ipsum sem eget augue.
-
-              MaeceLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie augue vel nunc placerat tincidunt. Etiam sed eleifend erat, ornare placerat justo. Nam venenatis nisl feugiat nibh lobortis euismod. Maecenas auctor dolor eu erat dapibus aliquam. Duis ultricies urna nec mattis laoreet. Nunc id ullamcorper risus, ut ultrices orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus at libero auctor aliquam. Pellentesque posuere et eros sit amet viverra. Quisque lobortis leo et sollicitudin pulvinar.
-
-              Proin dignissim efficitur euismod. Pellentesque eget vestibulum ex. Aenean vestibulum accumsan lacus a ullamcorper. Nullam nisl arcu, condimentum hendrerit mollis eu, dictum id ligula. Vivamus efficitur, nunc vitae placerat faucibus, lorem odio varius nisl, quis dignissim ex lectus nec neque. Maecenas nulla lectus, posuere eget dictum at, gravida vel est. Donec congue viverra ante, quis congue enim viverra eget. Sed ut magna et nibh vehicula euismod. Pellentesque feugiat consectetur arcu, eu aliquam est mattis in. Nunc faucibus, dolor sit amet ultricies commodo, quam massa iaculis tellus, at sollicitudin est mauris et sem. Donec ullamcorper, mi vitae aliquet facilisis, tortor mauris laoreet lectus, eu tincidunt ipsum sem eget augue.
-
-              Maecenas ut magna sagittis ipsum rutrum faucibus vitae a mi. Pellentesque pellentesque eleifend nisl, at tempus libero rutrum vitae. Morbi luctus eros vitae turpis egestas, at luctus justo pretium. Aenean ultricies velit in ipsum faucibus, id hendrerit risus egestas. Mauris at velit sed nunc porta mattis. Vestibulum sed gravida magna, vitae bibendum nisi. Vestibulum ornare hendrerit convallis. Mauris sed efficitur tortor. Etiam consequat aliquam posuere. Aenean ac iaculis lorem. Pellentesque aliquet quam ac ipsum commodo ultrices. Pellentesque feugiat arcu ut nisl facilisis euismod. Aliquam at rhoncus purus.
-            </p>
-          </div>
         </section>
       </div>
 
       <div>
-        <section id='skills'>
+        <section id='skills' className="pb-10">
           <div className="pt-20 items-center font-bold text-4xl pb-10">
             Skills
           </div>
@@ -134,7 +125,7 @@ export default function Page() {
 
 
       <div>
-        <section id='contact'>
+        <section id='contact' className="pb-10">
           <div className="pt-20 items-center font-bold text-4xl pb-10">
             Contact
           </div>
