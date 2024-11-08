@@ -60,8 +60,8 @@ export default function Navbar() {
                         <div className="flex justify-between h-16">
                             <div className="flex justify-between w-full">
                                 <Link href="/">
-                                    <h1 className="text-2xl font-medium">
-                                        <span className="text-indigo-500">Nakarin</span>
+                                    <h1 className="text-2xl font-medium pt-4">
+                                        <span className="text-indigo-500">Nakarin</span>.dev
                                     </h1>
                                 </Link>
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8 sm:items-center">
