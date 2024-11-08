@@ -3,11 +3,27 @@ import Me from "@/public/image.jpeg"
 import { Button } from "@headlessui/react";
 
 export default function Page() {
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const yOffset = -70; // Adjust this value to fit the offset you need
+      const y = section.getBoundingClientRect().top + window + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
+  const handleNavClick = (event, id) => {
+    event.preventDefault();
+    scrollToSection(id);
+  };
+
+
   return (
     <div className="divide-y divide-gray-100 dark:divide-gray-700">
       <section id="home">
         <div className="pt-20 items-center font-bold text-4xl">
-          Home
+          Introduction
         </div>
         <div className="items-center space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">

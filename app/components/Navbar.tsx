@@ -8,6 +8,7 @@ import { debounce } from 'lodash';
 
 export default function Navbar() {
     const [activeHash, setActiveHash] = useState('');
+    const [scrolling, setScrolling] = useState(false);
 
     useEffect(() => {
         const sections = document.querySelectorAll("section");
@@ -15,19 +16,21 @@ export default function Navbar() {
         const observerOptions = {
             root: null,
             rootMargin: "0px",
-            threshold: 0.9,
+            threshold: 0.85,
         };
 
         const updateHash = debounce((newHash) => {
-            setActiveHash(newHash);
-            window.history.replaceState(null, "", newHash);
+            if (!scrolling) { // Update only if not in scrolling mode
+                setActiveHash(newHash);
+                window.history.replaceState(null, "", newHash);
+            }
         }, 100);
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     const newHash = `#${entry.target.id}`;
-                    if (newHash !== activeHash) {
+                    if (newHash !== activeHash && !scrolling) {
                         updateHash(newHash);
                     }
                 }
@@ -40,20 +43,28 @@ export default function Navbar() {
             sections.forEach((section) => observer.unobserve(section));
             updateHash.cancel();
         };
-    }, [activeHash]);
+    }, [activeHash, scrolling]);
 
     const handleSmoothScroll = (e, sectionId) => {
         e.preventDefault();
         const section = document.getElementById(sectionId);
+
         if (section) {
+            setScrolling(true); // Start scrolling mode to ignore observer updates
+
             section.scrollIntoView({ behavior: 'smooth' });
-            setActiveHash(`#${sectionId}`);
-            window.history.replaceState(null, "", `#${sectionId}`);
+
+            // After scrolling ends, reset `scrolling` to allow observer updates
+            setTimeout(() => {
+                setActiveHash(`#${sectionId}`);
+                window.history.replaceState(null, "", `#${sectionId}`);
+                setScrolling(false); // End scrolling mode
+            }, 600); // Adjust this duration based on smooth scroll duration
         }
     };
 
     return (
-        <Disclosure as="nav" className="sticky top-0 z-50 bg-white dark:bg-[#090908]">
+        <Disclosure as="nav" className="sticky top-0 z-50 bg-white dark:bg-[#090908] border-b-2">
             {({ open, close }) => (
                 <>
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +76,7 @@ export default function Navbar() {
                                     </h1>
                                 </Link>
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8 sm:items-center">
-                                    {["", "projects", "skills", "contact"].map((section) => (
+                                    {["home", "projects", "skills", "contact"].map((section) => (
                                         <a
                                             key={section}
                                             href={`#${section}`}
