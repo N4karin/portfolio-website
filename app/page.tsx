@@ -34,7 +34,7 @@ export default function Page() {
             <p>
               Hello everyone my name is Nakarin! I am 25 years old and a Software Engineer based in Basel/Switzerland.
             </p>
-            <p>
+            <p className="text-justify">
               I enjoy designing and coding applications as it is one of the most creative fields in technology. Driven by curiosity and the desire to craft efficient and user-friendly solutions, I love to work with a variety of technologies to keep a broad horizon and ensure that the right tools are used for the right job.
             </p>
 

@@ -1,19 +1,38 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
+import { Button } from "@headlessui/react";
 
 
 
 export default function Projects() {
     useEffect(() => {
-        AOS.init({ duration: 500, once: true });
+        AOS.init({ duration: 500, once: true }); 
     }, []);
+
+    const [filter,setFilter] = useState("All")
+
+    const applyFilter = (filter: string) => {
+        setFilter(filter)
+      };
 
     return (
         <div>
-            <div className="mx-auto grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-2 gap-y-4 pb-6">
+            <div className="mx-auto flex-row gap-16 space-x-8 pt-1 pb-8">
+                <Button onClick={() => applyFilter("all")}>
+                    <div className="dark:text-white font-medium text-2xl border-b-2 border-indigo-500 text-black"> All</div>
+                    
+                </Button>
+                <Button>
+                    <div className="text-gray-500 font-medium"> Languages/Frameworks</div>
+                </Button>
+                <Button>
+                    <div className="text-gray-500 font-medium"> Tools</div>
+                </Button>
+            </div>
+            <div className="mx-auto grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 gap-y-4 pb-6" data-aos="fade-up">
                 <div className="relative flex flex-col items-left group">
                     <svg viewBox="0 0 128 128" className="relative p-2 border-indigo-500 rounded-md border-2 text-indigo-500 dark:hover:text-[#111827] dark:hover:bg-indigo-500 hover:text-white hover:bg-indigo-500
                                     transition-transform duration-300 transform group-hover:-translate-y-2">

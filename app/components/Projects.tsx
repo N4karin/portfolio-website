@@ -7,7 +7,7 @@ import "aos/dist/aos.css"; // Import AOS styles
 
 export default function Projects() {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true }); // Initialize AOS with optional settings
+        AOS.init({ duration: 1000, once: true }); 
     }, []);
 
     return (
