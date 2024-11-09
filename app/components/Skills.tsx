@@ -140,7 +140,15 @@ export default function Skills() {
             </div>
 
             <div className="text-gray-500 pt-4">
-                <p>{tag !== "Tools" ? "This website was built using React, Next.js and Tailwind CSS" : "Including CI/CD and Unit Testing"}</p>
+                <p>
+                    {tag !== "Tools"
+                        ? (
+                            <>This website was built using React, Next.js and Tailwind CSS
+                            <span className="text-indigo-500 pl-8"><a href="https://github.com/N4karin/portfolio-website" target="_blank">View Source</a></span>
+                            </>
+                        )
+                        : "Including CI/CD and Unit Testing"}
+                </p>
             </div>
         </div>
     );
