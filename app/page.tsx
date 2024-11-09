@@ -53,7 +53,7 @@ export default function Page() {
           
 
           <div className="flex flex-col items-center pt-8 pb-8">
-          <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] dark:from-indigo-950 from-indigo-100 to-transparent rounded-full h-80 w-80 z-0 blur-xl absolute"></div>
+          <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] dark:from-indigo-950 from-indigo-200 to-transparent rounded-full h-80 w-80 z-0 blur-xl absolute"></div>
             <h3 className="text-2xl font-bold leading-8 tracking-tight">
 
               Nakarin Srijumrat
