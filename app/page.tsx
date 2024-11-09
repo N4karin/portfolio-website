@@ -3,6 +3,7 @@ import Me from "@/public/image.jpeg"
 import { Button } from "@headlessui/react";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 import 'aos/dist/aos.css';
 
 export default function Page() {
@@ -28,7 +29,7 @@ export default function Page() {
         <div className="pt-14 items-center font-bold text-4xl">
           Introduction
         </div>
-        <div className="items-center space-y-2 xl:grid xl:grid-cols-3 xl:space-y-0">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 gap-y-16 pb-6">
           <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
 
             <p>
@@ -43,28 +44,31 @@ export default function Page() {
               className="group text-gray-200 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-indigo-500 to-blue-700 cursor-pointer"
             >
               Download CV
-              <span className="group-hover:rotate-90 duration-300">
-                <Button className="ml-3" />
+              <span className="">
+                <Button />
               </span>
             </a>
           </div>
 
+          
 
           <div className="flex flex-col items-center pt-8 pb-8">
+          <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] dark:from-indigo-950 from-indigo-100 to-transparent rounded-full h-80 w-80 z-0 blur-xl absolute"></div>
             <h3 className="text-2xl font-bold leading-8 tracking-tight">
+
               Nakarin Srijumrat
             </h3>
-            <p className="text-gray-500 dark:text-gray-300 text-center pb-2">
+            <p className="text-gray-500 dark:text-gray-300 text-center pb-2 z-10">
               Software Engineer
             </p>
             <Image
               alt="Picture of Nakarin"
               src={Me}
-              className="h-48 w-48 rounded-full object-cover object-top"
+              className="w-40 h-44 object-cover rounded-3xl object-top z-10 transform hover:scale-110 duration-200"
             />
 
 
-            <div className="flex space-x-5 pt-6">
+            <div className="flex space-x-5 pt-6 z-10">
               <a href="https://github.com/N4karin" target="_blank">
                 <svg
                   viewBox="0 0 1024 1024"
@@ -122,17 +126,7 @@ export default function Page() {
           </div>
 
           <div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie augue vel nunc placerat tincidunt. Etiam sed eleifend erat, ornare placerat justo. Nam venenatis nisl feugiat nibh lobortis euismod. Maecenas auctor dolor eu erat dapibus aliquam. Duis ultricies urna nec mattis laoreet. Nunc id ullamcorper risus, ut ultrices orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus at libero auctor aliquam. Pellentesque posuere et eros sit amet viverra. Quisque lobortis leo et sollicitudin pulvinar.
-
-              Proin dignissim efficitur euismod. Pellentesque eget vestibulum ex. Aenean vestibulum accumsan lacus a ullamcorper. Nullam nisl arcu, condimentum hendrerit mollis eu, dictum id ligula. Vivamus efficitur, nunc vitae placerat faucibus, lorem odio varius nisl, quis dignissim ex lectus nec neque. Maecenas nulla lectus, posuere eget dictum at, gravida vel est. Donec congue viverra ante, quis congue enim viverra eget. Sed ut magna et nibh vehicula euismod. Pellentesque feugiat consectetur arcu, eu aliquam est mattis in. Nunc faucibus, dolor sit amet ultricies commodo, quam massa iaculis tellus, at sollicitudin est mauris et sem. Donec ullamcorper, mi vitae aliquet facilisis, tortor mauris laoreet lectus, eu tincidunt ipsum sem eget augue.
-
-              MaeceLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie augue vel nunc placerat tincidunt. Etiam sed eleifend erat, ornare placerat justo. Nam venenatis nisl feugiat nibh lobortis euismod. Maecenas auctor dolor eu erat dapibus aliquam. Duis ultricies urna nec mattis laoreet. Nunc id ullamcorper risus, ut ultrices orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus at libero auctor aliquam. Pellentesque posuere et eros sit amet viverra. Quisque lobortis leo et sollicitudin pulvinar.
-
-              Proin dignissim efficitur euismod. Pellentesque eget vestibulum ex. Aenean vestibulum accumsan lacus a ullamcorper. Nullam nisl arcu, condimentum hendrerit mollis eu, dictum id ligula. Vivamus efficitur, nunc vitae placerat faucibus, lorem odio varius nisl, quis dignissim ex lectus nec neque. Maecenas nulla lectus, posuere eget dictum at, gravida vel est. Donec congue viverra ante, quis congue enim viverra eget. Sed ut magna et nibh vehicula euismod. Pellentesque feugiat consectetur arcu, eu aliquam est mattis in. Nunc faucibus, dolor sit amet ultricies commodo, quam massa iaculis tellus, at sollicitudin est mauris et sem. Donec ullamcorper, mi vitae aliquet facilisis, tortor mauris laoreet lectus, eu tincidunt ipsum sem eget augue.
-
-              Maecenas ut magna sagittis ipsum rutrum faucibus vitae a mi. Pellentesque pellentesque eleifend nisl, at tempus libero rutrum vitae. Morbi luctus eros vitae turpis egestas, at luctus justo pretium. Aenean ultricies velit in ipsum faucibus, id hendrerit risus egestas. Mauris at velit sed nunc porta mattis. Vestibulum sed gravida magna, vitae bibendum nisi. Vestibulum ornare hendrerit convallis. Mauris sed efficitur tortor. Etiam consequat aliquam posuere. Aenean ac iaculis lorem. Pellentesque aliquet quam ac ipsum commodo ultrices. Pellentesque feugiat arcu ut nisl facilisis euismod. Aliquam at rhoncus purus.
-            </p>
+            <Contact />
           </div>
         </section>
       </div>

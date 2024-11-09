@@ -7,25 +7,33 @@ import "aos/dist/aos.css"; // Import AOS styles
 
 export default function Projects() {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true }); 
+        AOS.init({ duration: 1000, once: true });
     }, []);
 
     return (
         <div className="pb-10">
+            <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] dark:from-indigo-950 from-indigo-100 to-transparent rounded-full h-80 w-80 z-0 blur-xl absolute transform translate-x-1/2 translate-y-1/2"></div>
+
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-16 pb-6">
                 {[
-                    { src: "/projectimages/project1.jpg", name: "nakar.in", technologies: "Python, Django", alt: "MusicPage", description: "My personal website showcasing current and past projects, software/tools used and a comprehensive library of my discography." },
-                    { src: "/projectimages/project2.png", name: "Kanji Driller", technologies: "Angular, MongoDB", alt: "KanjiDrill", description: "A Japanese kanji learning tool featuring flashcard-style drills. Users can filter and select specific letters they want to learn." },
-                    { src: "/projectimages/project3.png", name: "Interval Trainer", technologies: "React, Express", alt: "IntervalTrainer", description: "An app to learn and memorize music intervals and chords. Offers recognition and recall quizzes using the keyboard as a virtual instrument." },
+                    { src: "/projectimages/project1.jpg", name: "nakar.in", technologies: "Python, Django", alt: "MusicPage", description: "My personal website showcasing current and past music projects, software/tools used and a comprehensive library of my discography." },
+                    { src: "", name: "Kanji Driller (WIP)", technologies: "Angular, MongoDB", alt: "KanjiDrill", description: "A Japanese kanji learning tool featuring flashcard-style drills. Users can filter and select specific letters they want to learn." },
+                    { src: "", name: "Interval Trainer (WIP)", technologies: "React, Express", alt: "IntervalTrainer", description: "An app to learn and memorize music intervals and chords. Offers recognition and recall quizzes using the keyboard as a virtual instrument." },
                 ].map((project, index) => (
                     <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
                         <div className="relative group w-full h-64 md:h-48 transform hover:-translate-y-6 transition-all duration-200">
-                            <Image
-                                src={project.src}
-                                alt={project.alt}
-                                layout="fill"
-                                className="object-cover"
-                            />
+                            {project.src ? (
+                                <Image
+                                    src={project.src}
+                                    alt={project.alt}
+                                    layout="fill"
+                                    className="object-cover"
+                                />
+                            ) : (
+                                <div className="flex items-center justify-center w-full h-full text-indigo-500 border-indigo-500 border-2">
+                                    Coming Soon
+                                </div>
+                            )}
 
                             {/* Dark overlay on hover */}
                             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300"></div>

@@ -61,7 +61,7 @@ export default function Navbar() {
             setScrolling(true);
     
             // Scroll to the section with an offset for the navbar height
-            const offset = -64; // height of navbar
+            const offset = -20; // height of navbar
             const yCoordinate = section.getBoundingClientRect().top + window.scrollY + offset;
     
             window.scrollTo({ top: yCoordinate, behavior: 'smooth' });
