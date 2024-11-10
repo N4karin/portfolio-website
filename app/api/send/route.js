@@ -14,6 +14,7 @@ export async function POST(req) {
             subject: `Contact via nakarin.dev: ${subject}`,
             react: (
                 <>
+                    <p>From {email} </p>
                     <p>Thank you for contacting me! Here is a copy of your message!</p>
                     <p>{message}</p>
                 </>
