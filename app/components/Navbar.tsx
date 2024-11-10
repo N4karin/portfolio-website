@@ -38,7 +38,7 @@ export default function Navbar() {
             }
         }, observerOptions);
 
-        const updateHash = debounce((newHash) => {
+        const updateHash = debounce((newHash: string) => {
             if (!scrolling) { // Update only if not in scrolling mode
                 setActiveHash(newHash);
                 window.history.replaceState(null, "", newHash);
@@ -53,7 +53,7 @@ export default function Navbar() {
         };
     }, [activeHash, scrolling]);
 
-    const handleSmoothScroll = (e, sectionId) => {
+    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
         e.preventDefault();
         const section = document.getElementById(sectionId);
 

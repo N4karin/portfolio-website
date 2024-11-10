@@ -122,7 +122,7 @@ export default function Skills() {
 
     const [tag, setTag] = useState('All');
 
-    const handleTagChange = (newTag) => {
+    const handleTagChange = (newTag: string) => {
         setTag(newTag);
     }
 
@@ -146,14 +146,17 @@ export default function Skills() {
 
             <div className="text-gray-500 pt-4">
                 <p>
-                    {tag !== "Tools"
-                        ? (
-                            <>
+                    {tag !== "Tools" ? (
+                        <>
                             This website was built using React, Next.js and Tailwind CSS
-                            <div className="text-indigo-500 text-sm pt-2 dark:text-indigo-400"><a href="https://github.com/N4karin/portfolio-website" target="_blank">View Source</a></div>
-                            </>
-                        )
-                        : "Including CI/CD and Unit Testing"}
+                            <br />
+                            <span className="text-indigo-500 text-sm pt-2 dark:text-indigo-400">
+                                <a href="https://github.com/N4karin/portfolio-website" target="_blank">View Source</a>
+                            </span>
+                        </>
+                    ) : (
+                        "Including CI/CD and Unit Testing"
+                    )}
                 </p>
             </div>
         </div>

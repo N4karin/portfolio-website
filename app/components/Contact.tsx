@@ -7,12 +7,12 @@ export default function Contact() {
     const [emailSubmitted, setEmailSubmitted] = useState(false)
 
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const data = {
-            email: e.target.email.value,
-            subject: e.target.subject.value,
-            message: e.target.message.value,
+            email: (e.target as HTMLFormElement).email.value,
+            subject: (e.target as HTMLFormElement).subject.value,
+            message: (e.target as HTMLFormElement).message.value,
         };
 
         const JSONdata = JSON.stringify(data);
@@ -59,7 +59,7 @@ export default function Contact() {
             <div className="grid md:grid-cols-2 pb-4 gap-8 z-10">
                 <div>
                     <h1 className="font-medium text-xl pb-4">
-                        Let's talk! :)
+                        {"Let's talk! :)"}
                     </h1>
 
                     <p className="prose dark:prose-invert text-justify">

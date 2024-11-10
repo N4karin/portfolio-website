@@ -1,5 +1,10 @@
-const SkillCard = ({ path, name, viewbox }) => {
+interface SkillCardProps {
+    path: string;
+    name: string;
+    viewbox?: string;
+}
 
+const SkillCard: React.FC<SkillCardProps> = ({ path, name, viewbox }) => {
     const svgViewBox = viewbox && viewbox.trim().length > 0 ? viewbox : "0 0 128 128";
 
     return (

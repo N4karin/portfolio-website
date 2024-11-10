@@ -8,19 +8,22 @@ import 'aos/dist/aos.css';
 
 export default function Page() {
 
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      const yOffset = 300; // Adjust this value to fit the offset you need
-      const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
 
-  const handleNavClick = (event, id: string) => {
-    event.preventDefault();
-    scrollToSection(id);
-  };
+  // moved functionality to Navbar.tsx
+  //
+  // const scrollToSection = (id: string) => {
+  //   const section = document.getElementById(id);
+  //   if (section) {
+  //     const yOffset = 300; // Adjust this value to fit the offset you need
+  //     const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+  //     window.scrollTo({ top: y, behavior: 'smooth' });
+  //   }
+  // };
+
+  // const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  //   event.preventDefault();
+  //   scrollToSection(id);
+  // };
 
 
   return (
