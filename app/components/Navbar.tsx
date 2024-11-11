@@ -75,14 +75,14 @@ export default function Navbar() {
     };
 
     return (
-        <Disclosure as="nav" className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b-2 dark:border-gray-500">
+        <Disclosure as="nav" className="sticky top-0 z-50 bg-gray-200 dark:bg-gray-800 border-gray-300 border-b-2 dark:border-gray-600">
             {({ open, close }) => (
                 <>
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex justify-between h-12">
+                        <div className="flex justify-between h-14">
                             <div className="flex justify-between w-full">
                                 <Link href="/">
-                                    <h1 className="text-3xl font-medium pt-2">
+                                    <h1 className="text-3xl font-medium pt-3">
                                         <span className="text-indigo-500">nakarin</span>.dev
                                     </h1>
                                 </Link>
@@ -93,8 +93,8 @@ export default function Navbar() {
                                             href={`#${section}`}
                                             onClick={(e) => handleSmoothScroll(e, section || "home")}
                                             className={`${activeHash === `#${section}` ? 
-                                                "border-indigo-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                                                : 'hover:text-black border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium h-full'
+                                                "border-indigo-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium"
+                                                : 'hover:text-black border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-md font-medium h-full'
                                             }`}
                                         >
                                             {section.charAt(0).toUpperCase() + section.slice(1) || 'Home'}
