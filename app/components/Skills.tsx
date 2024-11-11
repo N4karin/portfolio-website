@@ -115,7 +115,7 @@ const skillData = [
     },
     {
         name: "Vercel",
-        path: '<path d="M64.002 8.576 128 119.424H0Zm0 0"></path></g>', //shortest path in the west
+        path: '<g fill="currentColor"><path d="M64.002 8.576 128 119.424H0Zm0 0"></path></g>', //shortest path in the west
         type: "Tools"
     }
 ];
