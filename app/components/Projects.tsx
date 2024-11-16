@@ -16,7 +16,7 @@ export default function Projects() {
 
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-16 pb-6">
                 {[
-                    { src: "/projectimages/project1.jpg", name: "nakar.in (WIP)", technologies: "Vite, React", link:"https://nakar.in", source:"https://github.com/N4karin/music-webpage", alt: "MusicPage", description: "My personal website showcasing current and past music projects, software/tools used and a comprehensive library of my discography." },
+                    { src: "/projectimages/project1.jpg", name: "nakar.in (WIP)", technologies: "Vite, React, Contentful", link:"https://nakar.in", source:"https://github.com/N4karin/music-webpage", alt: "MusicPage", description: "My personal website showcasing my music projects, software/tools used and a blog. Created to learn how to using headless CMS in webpages work." },
                     { src: "/projectimages/project2.jpg", name: "VR Open Text Input", technologies: "C#, Unity", link:"https://github.com/N4karin/vr-open-text-input", source:"https://github.com/N4karin/vr-open-text-input", alt: "VRProject", description: "A set of 3 modular input methods to use with the Unity Game engine. Result of my Bachelor Thesis, researching whether mimicking real-life input methods is the most user-friendly." },
                     { src: "", name: "Kanji Driller (WIP)", technologies: "TBD", alt: "KanjiDrill", link:"", source:"", description: "A Japanese kanji learning tool featuring flashcard-style drills. Users can filter and select specific letters they want to learn." },
                     { src: "", name: "Interval Trainer (WIP)", technologies: "TBD", alt: "IntervalTrainer", link:"", source:"", description: "An app to learn and memorize music intervals and chords. Offers recognition and recall quizzes using the keyboard as a virtual instrument." },
@@ -63,7 +63,7 @@ export default function Projects() {
                         {/* Project description */}
                         <div className="mt-4 flex flex-col space-y-2 h-40">
                             <p className="text-left font-bold text-xl">{project.name}</p>
-                            <p className="text-left flex-grow">{project.description}</p>
+                            <p className="text-justify flex-grow">{project.description}</p>
                             <p className="text-left font-semibold text-sm text-gray-500">{project.technologies}</p>
                         </div>
                     </div>
