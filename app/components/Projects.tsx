@@ -61,7 +61,7 @@ export default function Projects() {
                         </div>
 
                         {/* Project description */}
-                        <div className="mt-4 flex flex-col space-y-2 h-40">
+                        <div className="mt-4 flex flex-col space-y-2 h-48">
                             <p className="text-left font-bold text-xl">{project.name}</p>
                             <p className="text-justify flex-grow">{project.description}</p>
                             <p className="text-left font-semibold text-sm text-gray-500">{project.technologies}</p>

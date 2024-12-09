@@ -42,8 +42,12 @@ export default function Page() {
               I enjoy designing and coding applications as it is one of the most creative fields in technology. Driven by curiosity and the desire to craft efficient and user-friendly solutions, I love to work with a variety of technologies to keep a broad horizon and ensure that the right tools are used for the right job.
             </p>
 
+            <p className="text-justify">
+            I speak German, English, Japanese, Thai and a bit of French.
+            </p>
+
             <a
-              href={"/NakarinSrijumratCV.pdf"} download target='_blank'
+              href={"/Nakarin Srijumrat_CV_SoftwareEng_2024.pdf"} download target='_blank'
               className="group text-gray-200 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-indigo-500 to-blue-700 cursor-pointer"
             >
               Download CV
