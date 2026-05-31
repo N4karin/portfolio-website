@@ -47,7 +47,7 @@ export default function Page() {
             </p>
 
             <a
-              href={"/Nakarin Srijumrat_CV_SoftwareEng_2024.pdf"} download target='_blank'
+              href={"/cv_2026_NakarinSrijumrat.pdf"} download target='_blank'
               className="group text-gray-200 w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-indigo-500 to-blue-700 cursor-pointer"
             >
               Download CV
