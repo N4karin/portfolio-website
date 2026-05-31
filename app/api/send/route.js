@@ -11,7 +11,7 @@ export async function POST(req) {
         const { data, error } = await resend.emails.send({
             from: fromEmail,
             to: ['nakarin@gmx.ch', email],
-            subject: `Contact via nakarin.dev: ${subject}`,
+            subject: `Contact via nakarin.me: ${subject}`,
             react: (
                 <>
                     <p>From {email} </p>
