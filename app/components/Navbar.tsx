@@ -83,7 +83,7 @@ export default function Navbar() {
                             <div className="flex justify-between w-full">
                                 <Link href="/">
                                     <h1 className="text-3xl font-medium pt-3">
-                                        <span className="text-indigo-500">nakarin</span>.dev
+                                        <span className="text-indigo-500">nakarin</span>.me
                                     </h1>
                                 </Link>
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8 sm:items-center">

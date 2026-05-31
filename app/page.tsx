@@ -36,10 +36,14 @@ export default function Page() {
           <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
 
             <p>
-              Hello everyone my name is Nakarin! I am 25 years old and a Software Engineer based in Basel/Switzerland.
+              Hello everyone my name is Nakarin! I am 27 years old and a Cloud/DevOps Engineer based in Basel/Switzerland.
             </p>
             <p className="text-justify">
               I enjoy designing and coding applications as it is one of the most creative fields in technology. Driven by curiosity and the desire to craft efficient and user-friendly solutions, I love to work with a variety of technologies to keep a broad horizon and ensure that the right tools are used for the right job.
+            </p>
+
+            <p className="text-justify">
+            In my spare time, i enjoy making music which I release onto my YouTube channel and Spotify. I also love reading and sports, especially badminton and volleyball.
             </p>
 
             <p className="text-justify">
@@ -66,7 +70,7 @@ export default function Page() {
               Nakarin Srijumrat
             </h3>
             <p className="text-gray-500 dark:text-gray-300 text-center pb-2 z-10">
-              Software Engineer
+              Cloud/DevOps Engineer
             </p>
             <Image
               alt="Picture of Nakarin"
